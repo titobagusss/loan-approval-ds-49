@@ -61,14 +61,14 @@ def run_ml_app():
 def predict(gender, married, dependent, education, self_employed, applicant_income, coApplicant_income
                          ,loan_amount, loan_amount_term, credit_history, property_area):
     #preprocessing user input
-    gen - 0 if gender == "male" else 1
+    gen - 0 if gender == "Male" else 1
     mar = 0 if married == "Yes" else 1
     edu = 0 if education == "Graduate" else 1
     sem = 0 if self_employed == "Yes" else 1
     pro = 0 if property_area == "SemiUrban" else 1 if property_area == "Urban" else 2
                              
     #making prediction
-    predition = Logistic_Regression_Model.predict(
+    prediction = Logistic_Regression_Model.predict(
     [[gen, mar, dependent, edu, sem, applicant_income, coApplicant_income, loan_amount, loan_amount_term, credit_history, pro]]
     )
 
